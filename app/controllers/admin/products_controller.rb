@@ -1,4 +1,6 @@
 class Admin::ProductsController < ApplicationController
+  include AuthenticationHelper
+  before_filter :authenticate
 
   def index
     @products = Product.order(id: :desc).all
@@ -25,7 +27,6 @@ class Admin::ProductsController < ApplicationController
   end
 
   private
-
   def product_params
     params.require(:product).permit(
       :name,
@@ -36,5 +37,4 @@ class Admin::ProductsController < ApplicationController
       :price
     )
   end
-
 end

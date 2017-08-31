@@ -1,4 +1,6 @@
 class Admin::CategoriesController < ApplicationController
+  include AuthenticationHelper
+  before_filter :authenticate
   def index
     @categories = Category.order(id: :desc).all
   end
