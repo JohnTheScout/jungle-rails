@@ -26,6 +26,28 @@
       </div>
     </div>
 
+    <h3>Reviews</h3>
+    <hr>
+    <div class="row">
+      <dl class="dl-horizontal">
+      <% @product.reviews.each do |review| %>
+        <dt>Description</dt>
+        <dd><%= review.description %></dd>
+        <dt>Rating</dt>
+        <dd>
+          <% (1..review.rating).each do %>
+            <span>★</span>
+          <% end %>
+          <% if review.rating < 5 %>
+            <% (review.rating..4).each do %>
+              <span>☆</span>
+            <% end %>
+          <% end %>
+        </dd>
+      <% end %>
+      </dl>
+    </div>
+
   </article>
 
 </section>
