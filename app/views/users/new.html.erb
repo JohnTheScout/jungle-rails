@@ -1,4 +1,12 @@
 <h1>New User</h1>
+<% if session[:errors] %>
+  <div class="alert alert-danger">
+    <% session[:errors].each do |err| %>
+      <%= err %>
+    <% end %>
+  </div>
+  <% session[:errors] = nil %>
+<% end %>
 
 <%= form_for :user, url: '/users' do |f| %>
   First Name:<br><%= f.text_field :first_name %><br>

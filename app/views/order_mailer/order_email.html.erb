@@ -1,23 +1,15 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
-  </head>
-  <body>
-    <h1>Thank you for your order #<%= @order.id%></h1>
-    <p>
-      Hello, <%= @user.first_name %><br>
-      Thank you for your recent order. This completes your order, tracking information will follow. Thanks for shopping at Jungle!
-    </p>
-    <hr>
-    <% @cart_total = 0 %>
-    <% @order.line_items.each do |item| %>
-      <%= render 'item', item: item %>
-    <% end %>
-    <hr>
-    <strong>
-      TOTAL:
-    </strong>
-    <%= @cart_total %>
-  </body>
-</html>
+<h1>Thank you for your order #<%= @order.id%></h1>
+<p>
+  Hello, <%= @user.first_name %><br>
+  Thank you for your recent order. This completes your order, tracking information will follow. Thanks for shopping at Jungle!
+</p>
+<hr>
+<% @cart_total = 0 %>
+<% @order.line_items.each do |item| %>
+  <%= render 'item', item: item %>
+<% end %>
+<hr>
+<strong>
+  TOTAL:
+</strong>
+<%= @cart_total %>

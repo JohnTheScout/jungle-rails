@@ -1,0 +1,10 @@
+Thank you for your order #<%= @order.id%>
+Hello, <%= @user.first_name %>
+Thank you for your recent order. This completes your order, tracking information will follow. Thanks for shopping at Jungle!
+============================================================================================================================
+<% @cart_total = 0 %>
+<% @order.line_items.each do |item| %>
+  <%= render 'item', item: item %>
+<% end %>
+============================================================================================================================
+TOTAL: <%= @cart_total %>

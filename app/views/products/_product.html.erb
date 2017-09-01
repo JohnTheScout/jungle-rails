@@ -9,7 +9,7 @@
     <%= product.description %>
   </p>
   <footer class="actions">
-    <% if product.quantity != 0 %>
+    <% unless product.sold_out? %>
       <%= link_to add_item_cart_path(product_id: product.id), class: 'btn btn-primary', method: :put do %>
         <%= fa_icon "shopping-cart", text: 'Add' %>
       <% end %>
@@ -19,7 +19,7 @@
     <% end %>
   </footer>
 
-  <% if product.quantity == 0 %>
+  <% if product.sold_out? %>
     <aside class="sold-out">
       Sold Out!
     </aside>
