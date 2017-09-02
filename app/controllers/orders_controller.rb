@@ -9,7 +9,7 @@ class OrdersController < ApplicationController
     order  = create_order(charge)
 
     if order.valid?
-      OrderMailer.order_email(User.find(session[:user_id]), order).deliver_later
+      OrderMailer.order_email(User.find(session[:user_id]), order).deliver_later unless session[:user_id] == nil
       empty_cart!
       redirect_to order, notice: 'Your Order has been placed.'
     else
@@ -31,14 +31,14 @@ class OrdersController < ApplicationController
     Stripe::Charge.create(
       source:      params[:stripeToken],
       amount:      cart_total, # in cents
-      description: "Khurram Virani's Jungle Order",
+      description: "Jungle Order",
       currency:    'cad'
     )
   end
 
   def create_order(stripe_charge)
     order = Order.new(
-      email: params[:stripeEmail],
+      email: current_user ? current_user.email : params[:stripeEmail],
       total_cents: cart_total,
       stripe_charge_id: stripe_charge.id, # returned by stripe
     )

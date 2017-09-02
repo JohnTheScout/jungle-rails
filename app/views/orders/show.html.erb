@@ -5,7 +5,7 @@
   </header>
 
   <div class="order-summary jumbotron">
-    <h4>Thank you for your order!</h4>
+    <h2>Thank you for your order!</h2>
     <table class="table table-bordered">
       <thead>
         <tr>
@@ -32,8 +32,9 @@
         </tr>
       </tfoot>
     </table>
+    <strong>Order receipt will be emailed to <%= current_user ? current_user.email : 'kvirani@gmail.com' %></strong>
   </div>
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
-
+  <p><p/>
 </section>
