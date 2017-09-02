@@ -11,16 +11,22 @@ A mini e-commerce application built with Rails 4.2 for purposes of learning Rail
 ![review_logged_out](/screenshots/review-logged-out.png)
 ![review_logged_in](/screenshots/review-logged-in.png)
 
-register page validates and displays an error when something isn't right
+Register page validates and displays an error when something isn't right
 ![register](/screenshots/register-w-error.png)
 ![login](/screenshots/login.png)
 ![cart-empty](/screenshots/cart-empty.png)
 ![cart-full](/screenshots/cart-full.png)
 ![order](/screenshots/order.png)
 ![order](/screenshots/order2.png)
+
+Emails sent in html...
 ![email-html](/screenshots/email_html.png)
 ![email-html](/screenshots/email_html2.png)
+
+and in plain text
 ![email-text](/screenshots/email_text.png)
+
+All admin pages is protected by http basic authentication
 ![admin-dashboard](/screenshots/admin-dashboard.png)
 ![admin-products](/screenshots/admin-products.png)
 ![admin-categories](/screenshots/admin-categories.png)
