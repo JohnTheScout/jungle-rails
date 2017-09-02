@@ -1,11 +1,32 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+A mini e-commerce application built with Rails 4.2 for purposes of learning Rails by example.
 
+## Screenshots
 
-## Setup
+![main_page](/screenshots/main.png)
+![categories](/screenshots/category.png)
+![categories](/screenshots/category2.png)
+![product_description](/screenshots/product-description.png)
+![review_logged_out](/screenshots/review-logged-out.png)
+![review_logged_in](/screenshots/review-logged-in.png)
+register page validates and displays an error when something isn't right
+![register](/screenshots/register-w-error.png)
+![login](/screenshots/login.png)
+![cart-empty](/screenshots/cart-empty.png)
+![cart-full](/screenshots/cart-full.png)
+![order](/screenshots/order.png)
+![order](/screenshots/order2.png)
+![email-html](/screenshots/email_html.png)
+![email-html](/screenshots/email_html2.png)
+![email-text](/screenshots/email_text.png)
+![admin-dashboard](/screenshots/admin-dashboard.png)
+![admin-products](/screenshots/admin-products.png)
+![admin-categories](/screenshots/admin-categories.png)
 
-1. Fork & Clone
+## Running this site
+
+1. Clone this repo to your machine
 2. Run `bundle install` to install dependencies
 3. Create `config/database.yml` by copying `config/database.example.yml`
 4. Create `config/secrets.yml` by copying `config/secrets.example.yml`
@@ -13,7 +34,7 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 6. Create .env file based on .env.example
 7. Sign up for a Stripe account
 8. Put Stripe (test) keys into appropriate .env vars
-9. Run `bin/rails s -b 0.0.0.0` to start the server
+9. Run `bin/rails s` to start the server
 
 ## Stripe Testing
 
