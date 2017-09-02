@@ -10,6 +10,7 @@ A mini e-commerce application built with Rails 4.2 for purposes of learning Rail
 ![product_description](/screenshots/product-description.png)
 ![review_logged_out](/screenshots/review-logged-out.png)
 ![review_logged_in](/screenshots/review-logged-in.png)
+
 register page validates and displays an error when something isn't right
 ![register](/screenshots/register-w-error.png)
 ![login](/screenshots/login.png)
