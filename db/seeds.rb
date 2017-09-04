@@ -133,26 +133,42 @@ cat3.products.create!({
   price: 2_483.75
 })
 
-#puts "Creating reviews..."
-#cat1.products.first.reviews.create({
-#  product_id: cat1.products.first.id,
-#  user_id: 1,
-#  description: 'Really great product!',
-#  rating: 5
-#})
-#
-#cat2.products.first.reviews.create({
-#  product_id: cat2.products.first.id,
-#  user_id: 2,
-#  description: 'Kinda mediocre.',
-#  rating: 3
-#})
-#
-#cat3.products.first.reviews.create({
-#  product_id: cat3.products.first.id,
-#  user_id: 2,
-#  description: 'Disappointing',
-#  rating: 2
-#})
+puts "Creating default users"
+john = User.create({
+  first_name: 'John',
+  last_name: 'Goff',
+  email: 'gygn.johngoff@gmail.com',
+  password: 'testtest',
+  password_confirmation: 'testtest'
+})
+bob = User.create({
+  first_name: 'Bob',
+  last_name: 'Smith',
+  email: 'test@test.com',
+  password: 'testtest',
+  password_confirmation: 'testtest'
+})
+
+puts "Creating reviews..."
+cat1.products.first.reviews.create({
+  product_id: cat1.products.first.id,
+  user_id: john.id,
+  description: 'Really great product!',
+  rating: 5
+})
+
+cat2.products.first.reviews.create({
+  product_id: cat2.products.first.id,
+  user_id: bob.id,
+  description: 'Kinda mediocre.',
+  rating: 3
+})
+
+cat3.products.first.reviews.create({
+  product_id: cat3.products.first.id,
+  user_id: bob.id,
+  description: 'Disappointing',
+  rating: 2
+})
 
 puts "DONE!"
