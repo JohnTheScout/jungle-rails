@@ -23,7 +23,6 @@ RSpec.feature "AddToCarts", type: :feature, js: true do
     #DEBUG
     save_screenshot
     #VERIFY
-    puts page.html
-    expect(page).to have_css 'article.product', count: 10
+    within('nav') { expect(page).to have_content 'My Cart (1)' }
   end
 end
