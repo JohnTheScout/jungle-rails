@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: john-goff
+  api_key: '327131342388541'
+  api_secret: 2s7Ck9QP-SiAiIE4BhWKyqNm83U
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: john-goff
+  api_key: '327131342388541'
+  api_secret: 2s7Ck9QP-SiAiIE4BhWKyqNm83U
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: john-goff
+  api_key: '327131342388541'
+  api_secret: 2s7Ck9QP-SiAiIE4BhWKyqNm83U
+  enhance_image_tag: true
+  static_image_support: false
