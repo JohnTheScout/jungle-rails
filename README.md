@@ -4,7 +4,7 @@ A mini e-commerce application built with Rails 4.2 for purposes of learning Rail
 
 This project started as an inherited code base. I added sold out labels, user accounts, order reciepts and email reciepts, admin authentication with HTTP basic auth, and product rating features.
 
-You can view the site at TODO: add link
+You can view the site at https://whispering-lake-55007.herokuapp.com/
 
 ## Screenshots
 
