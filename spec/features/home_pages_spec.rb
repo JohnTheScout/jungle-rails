@@ -1,5 +1,8 @@
 require 'rails_helper'
 
-RSpec.feature "HomePages", type: :feature do
-  pending "add some scenarios (or delete) #{__FILE__}"
+RSpec.feature "Vistor navigates to home page", type: :feature, js: true do
+  scenario 'they see all products' do 
+    visit root_path
+    save_screenshot
+  end
 end
